@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 	
-var app = angular.module('iosSpinner', []);
+	var app = angular.module('iosSpinner', []);
 
 	app.directive('iosSpinner', iosSpinner);
     
@@ -17,16 +17,17 @@ var app = angular.module('iosSpinner', []);
 			element.css({
 				width: attrs.width+'px',
 				height: attrs.height+'px',
-				position: 'absolute',
-				padding: '10px'
+				position: 'relative',
+				padding: '10px',
+				display: 'inline-block'
 			})
-
+			
 			attrs.color = attrs.color || '#FFF'
 
 			for (var i = 1 ; i <= 12 ; i ++) {
 				element.append('<div class="bar'+i+'" style="background-color:'+attrs.color+'"></div>')	
 			}
-
+			
 		};	
 
 		return {
