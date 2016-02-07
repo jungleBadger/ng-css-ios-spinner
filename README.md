@@ -9,7 +9,11 @@ AngularJS dependencie required;
 
 ## Code Example
 
- <ios-spinner width="30" height="30" color="red"></ios-spinner>'
+ '<ios-spinner 
+      width="30" 
+      height="30"
+      color="red">
+ </ios-spinner>'
 
 ## Motivation
 
