@@ -10,10 +10,13 @@ var app = angular.module('iosSpinner', []);
     function iosSpinner () {
 
 		function link(scope, element, attrs) {
+			
+			attrs.width = attrs.width ? attrs.width.replace(/\D+/g, "") : '20';
+			attrs.height = attrs.height ? attrs.height.replace(/\D+/g, "") : '20';
 
 			element.css({
-				width: (attrs.width ||  '20')+'px', 
-				height: (attrs.height || '20')+'px',
+				width: attrs.width+'px',
+				height: attrs.height+'px',
 				position: 'absolute',
 				padding: '10px'
 			})
